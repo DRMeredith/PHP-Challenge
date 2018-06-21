@@ -1,11 +1,11 @@
 <?php
 ob_start();
 session_start();
-require_once 'config.php';
+require_once 'dbconnect.php';
 
 // it will never let you open index(login) page if session is set
 if ( isset($_SESSION['user'])!="" ) {
- header("Location: dashboard.php");
+ header("Location: home.php");
  exit;
 }
 
@@ -41,7 +41,7 @@ if( isset($_POST['btn-login']) ) {
  
   $password = hash('sha256', $pass); // password hashing
 
-  $res=mysqli_query($con, "SELECT user_id, firstname, pass FROM users WHERE email='$email'");
+  $res=mysqli_query($conn, "SELECT userId, userName, userPass FROM user WHERE userEmail='$email'");
   $row=mysqli_fetch_array($res, MYSQLI_ASSOC);
   $count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
  
