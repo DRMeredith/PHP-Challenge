@@ -1,0 +1,29 @@
+body {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-image: url("http://peterauto.peter.fr/wp-content/uploads/1958-Ferrari-250-Testa-Rossa-0728-%C2%A9Thierry-Desvignes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color: royalblue;
+}
+
+form {
+    background: whitesmoke;
+    padding: 20px;
+}
+
+a {
+    background: royalblue;
+    color: white;
+    padding: 3px;
+}
+
+button {
+    background-color: royalblue;
+    color: white;
+    margin: 15px;
+}
